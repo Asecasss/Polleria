@@ -1,0 +1,177 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-design{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 100vh;
+}
+
+.waves {
+    background-image: url('../../imagenes/wave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    margin-left: 40%;
+    width: 40%;
+    border-radius: 60px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-data {
+    text-align: center;
+    width: 60%;
+
+}
+
+.login-data h1 {
+    font-weight: 200;
+}
+
+.input-group {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.input-fill input {
+    border: none;
+    border-bottom: 3px solid #848F9A;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.05rem;
+    padding-left: 2rem;
+    line-height: 147.6%;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.input-fill input:focus {
+    outline: none;
+    border-color: #a15050;
+}
+
+.input-fill input:hover {
+    background-color: #daa2a2;
+}
+
+.input-fill input:focus + .input-label {
+    top: 0;
+    margin-bottom: 2rem;
+    color: #a15050;
+}
+
+.input-fill input:focus ~ i {
+    color: #a15050;
+}
+
+.input-fill .input-label {
+    position: absolute;
+    top: 20px;
+    left: 28px;
+    line-height: 147.6%;
+    color: #848F9A;
+    transition: top 0.2s;
+    font-weight: 700;
+}
+
+.input-fill i {
+    position: absolute;
+    top: 19px;
+    left: 0;
+    color: #848F9A;
+    font-size: 1.5rem;
+}
+/* animación del label flotante cuando hay texto */
+.input-fill input:focus + .input-label,
+.input-fill input:not(:placeholder-shown) + .input-label {
+    top: 0;
+    margin-bottom: 2rem;
+    color: #a15050;
+}
+
+.btn-login {
+    border-radius: 3rem;
+    width: 45%;
+    border: 1px solid #a15050;
+    line-height: 1.6rem;
+    font-size: 1.3rem;
+    background-color: #a15050;
+    color: #ffffff;
+    padding: 0.5rem 0;
+    transition: 0.3s ease-in-out all;
+    font-weight: 500;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #a15050;
+}
+
+/* Responsivo pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .login-design {
+        grid-template-columns: 1fr;   /* una sola columna */
+        height: auto;                 /* se ajusta al contenido */
+    }
+
+    .waves {
+        height: 30vh;                 /* la imagen ocupa menos alto */
+    }
+
+    .login {
+        padding: 2rem 1rem;           /* espacio interno */
+    }
+
+    .login-data {
+        width: 90%;                   /* formulario más ancho */
+    }
+
+    .input-group {
+        width: 90%;                   /* inputs más anchos */
+    }
+
+    .btn-login {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .waves {
+        display: none;                /* ocultamos el fondo si no cabe bien */
+    }
+
+    .login-data h1 {
+        font-size: 1.5rem;            /* título más chico */
+    }
+
+    .input-fill input {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .input-fill i {
+        font-size: 1.2rem;
+        top: 17px;
+    }
+}
+
