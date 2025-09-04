@@ -24,10 +24,21 @@ if ($resultado && mysqli_num_rows($resultado) > 0) {
     $_SESSION['nombre_completo'] = $user['nombre'] . ' ' . $user['apellido'];
     $_SESSION['rol'] = $user['rol'];
 
-    header("Location: ../InterfazMesero/interfazMesero.html");
+    // Redirigir según rol
+    if($user['rol'] == 'ADMIN') {
+        header("Location: ../InterfazMesero/interfazMesero.php");
+    } elseif($user['rol'] == 'MESERO') {
+        header("Location: ../InterfazMesero/interfazMesero.php");
+    } elseif($user['rol'] == 'CAJERO') {
+        header("Location: ../InterfazCajero/interfazCajero.php");
+    } else {
+        echo "Rol no válido";
+        exit();
+    }
     exit();
+
 } else {
-    echo "❌ Usuario o contraseña incorrectos 
+    echo "Usuario o contraseña incorrectos 
           <br><a href='../Login/Login.html'>Volver al login</a>";
 }
 

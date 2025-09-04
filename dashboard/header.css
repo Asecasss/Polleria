@@ -1,0 +1,67 @@
+/* Reset base */
+body {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333333;
+}
+
+/* ------------------ */
+/* CABECERA (Header) */
+/* ------------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background-color: #f57c00;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    list-style: none; /* Quitar viñetas */
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.nav li a {
+    text-decoration: none; /* Quitar subrayado */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .nav li a:hover {
+    background-color: #ffffff33;
+    color: #fff;
+}
