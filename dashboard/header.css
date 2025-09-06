@@ -11,8 +11,8 @@ body {
 /* CABECERA (Header) */
 /* ------------------ */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* logo | nav | menu */
     align-items: center;
     padding: 0.8rem 1.5rem;
     background-color: #f57c00;
@@ -64,4 +64,60 @@ header nav {
 header .nav li a:hover {
     background-color: #ffffff33;
     color: #fff;
+}
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+.menu {
+    position: relative;
+    left: 1rem;
+    top: 35%;
+    transform: translateY(-50%);
+}
+.menu, .cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 688px) {
+    .menu, .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .menu, .cerrar-menu {
+        color: white;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f57c00;
+        padding: 2rem;
+        box-shadow: 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: end;
+    }
 }
