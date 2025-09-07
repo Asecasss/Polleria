@@ -28,7 +28,7 @@
             <?php if($_SESSION['rol'] == 'ADMIN'){ ?>
                 <li><a href="../InterfazMesero/InterfazMesero.php">Panel Principal</a></li>
                 <li><a href="../controlUsuarios/controlUsuarios.php">Gestión de usuarios</a></li>
-                <li><a href="../InterfazAdmin/reportes.php">Reportes</a></li>
+                <li><a href="../InterfazReportes/Reportes.php">Reportes</a></li>
             <?php } ?>
 
             <?php if($_SESSION['rol'] == 'MESERO'){ ?>
