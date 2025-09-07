@@ -191,7 +191,7 @@ switch ($rango) {
 
     <!-- TABLA VENTAS -->
     <section class="tabla">
-        <h2>Ventas del <?= htmlspecialchars($filtro_fecha) ?></h2>
+        <h2>Tabla de Ventas</h2>
         <div class="tabla-scroll">
             <table>
                 <thead>
